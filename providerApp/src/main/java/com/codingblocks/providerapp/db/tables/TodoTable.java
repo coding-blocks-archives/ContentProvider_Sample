@@ -8,14 +8,7 @@ import com.codingblocks.providerapp.models.Todo;
 
 import java.util.ArrayList;
 
-import static com.codingblocks.providerapp.db.Consts.CMD_CREATE_TABLE_INE;
-import static com.codingblocks.providerapp.db.Consts.COMA;
-import static com.codingblocks.providerapp.db.Consts.LBR;
-import static com.codingblocks.providerapp.db.Consts.RBR;
-import static com.codingblocks.providerapp.db.Consts.SEMICOL;
-import static com.codingblocks.providerapp.db.Consts.TYPE_BOOL;
-import static com.codingblocks.providerapp.db.Consts.TYPE_PK_AI;
-import static com.codingblocks.providerapp.db.Consts.TYPE_TEXT;
+import static com.codingblocks.providerapp.db.Consts.*;
 
 /**
  * Created by championswimmer on 17/01/18.
