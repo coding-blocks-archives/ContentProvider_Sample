@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.codingblocks.providerapp.db.tables.TodoTable;
+
 /**
  * Created by championswimmer on 17/01/18.
  */
@@ -19,7 +21,7 @@ public class TodoDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(TodoTable.CMD_CREATE);
     }
 
     @Override
