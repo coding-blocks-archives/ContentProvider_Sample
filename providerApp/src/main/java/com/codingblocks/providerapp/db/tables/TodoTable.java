@@ -44,11 +44,9 @@ public class TodoTable {
 
     public static ArrayList<Todo> getAllTodos (SQLiteDatabase db) {
         ArrayList<Todo> todos = new ArrayList<>();
-        Cursor c = db.query(
-                TABLE_NAME,
-                new String[] {Columns.ID, Columns.TASK, Columns.DONE},
-                null, null, null, null, null
-        );
+
+        Cursor c = getAllTodosCursor(db);
+
         while (c.moveToNext()) {
             todos.add(new Todo(
                     c.getInt(0),
@@ -57,6 +55,14 @@ public class TodoTable {
             ));
         }
         return todos;
+    }
+
+    public static Cursor getAllTodosCursor (SQLiteDatabase db) {
+        return db.query(
+                TABLE_NAME,
+                new String[] {Columns.ID, Columns.TASK, Columns.DONE},
+                null, null, null, null, null
+        );
     }
 
 }
